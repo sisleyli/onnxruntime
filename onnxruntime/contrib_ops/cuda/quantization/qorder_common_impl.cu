@@ -346,8 +346,7 @@ ReorderS8RowToCol32Kernel(const int8_t* __restrict__ src, int8_t* __restrict__ d
   }
 }
 
-void ReorderS8RowToCol32(cudaStream_t stream, const cudaDeviceProp& /*device_prop*/,
-                         cublasLtOrder_t source_order, cublasLtOrder_t target_order,
+void ReorderS8RowToCol32(cudaStream_t stream, const cudaDeviceProp& /* device_prop */,
                          const int8_t* src, int8_t* dst,
                          unsigned batch, unsigned rows, unsigned cols) {
   dim3 threads(8, 32, 1);
